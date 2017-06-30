@@ -40,10 +40,12 @@ def main():
     if interface not in interfaces:
         print "Invalid interface. Quiting"
         exit()
-    print "Monitoring \'%s\'. Check stat.txt for RX, TX bytes. Ctrl C to stop." % interface
+    print "Monitoring \'%s\'. Check stat.txt for RX, TX bytes. \
+          Ctrl C to stop." % interface
     while 1:
         write_stat()
         time.sleep(3)
+
 
 if __name__ == "__main__":
     main()
