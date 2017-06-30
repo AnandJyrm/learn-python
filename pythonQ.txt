@@ -1,43 +1,87 @@
-Talk to me about the GIL. How does it impact concurrency in Python? What kinds of applications does it impact more than others?
-How does Python's garbage collection work?
-What is the difference between range and xrange? How has this changed over time?
-Here's a function. Optimize it for me.
-How do you iterate over a list and pull element indices at the same time?
-I'm getting a maximum recursion depth error for a function. What does this mean? How can I mitigate the problem?
-How do you enforce ordering for a dictionary-style object?
-How does Python's list.sort work at a high level? Is it stable? What's the runtime?
-What's the difference between a list, dictionary, and array in Python?
-What does this list comprehension do?
-Here's a class hierarchy with some methods defined. When I call this function, what gets printed?
-What is monkeypatching? How can you do it in Python?
-What are some caveats to pickling? Marshaling?
-How many ways can you append or concatenate strings? Which of these ways is fastest? Easiest to read?
+Q. What is GIL. How does it impact concurrency in Python? What kinds of applications does it impact more than others?
 
-Print me the full pathname of every file in this directory tree.
-	os.walk()
+
+Q. How does Python's garbage collection work?
+
+
+Q. What is the difference between range and xrange? How has this changed over time?
+
+
+Q. How do you iterate over a list and pull element indices at the same time?
+Enumerate function
+Example:
+	cities = ["london", "new york", "delhi", "moscow"]
+	for i, city in enumerate(cities):
+		print i, city
+
+Q. What does maximum recursion depth error mean? How to mitigate the problem?
+
+
+Q. How do you enforce ordering for a dictionary-style object?
+
+
+Q. How does Python's list.sort work at a high level? Is it stable? What's the runtime?
+
+
+Q. What's the difference between a list, dictionary, and array in Python?
+
+
+Q. What is monkeypatching? How can you do it in Python?
+
+
+Q. What are some caveats to pickling? Marshaling?
+
+
+Q. How many ways can you append or concatenate strings? Which of these ways is fastest? Easiest to read?
+
+	Print me the full pathname of every file in this directory tree.
+		os.walk()
 	
-	#!/usr/bin/python
-	import sys
-	import os
+		#!/usr/bin/python
+		import sys
+		import os
 
-	def listFiles(input_path):
-		for root,dirs,files in os.walk(input_path,topdown=False):
-			for name in files:
-				print os.path.join(root, name)
+		def listFiles(input_path):
+			for root,dirs,files in os.walk(input_path,topdown=False):
+				for name in files:
+					print os.path.join(root, name)
 
-	if __name__ == "__main__":
-		if len(sys.argv) == 1:
-			listFiles(".")
-		else:
-			listFiles(sys.argv[1])
+		if __name__ == "__main__":
+			if len(sys.argv) == 1:
+				listFiles(".")
+			else:
+				listFiles(sys.argv[1])
 			
-What's wrong with this function?
-What's your preferred editor? (vim, of course - anything else and they fail.)
-Do arguments in Python get passed by reference or by value?
-Why are functions considered first class objects in Python?
-What tools do you use for linting, debugging and profiling?
-Give an example of filter and reduce over an iterable object
-Implement the linux whereis command that locates the binary, source, and manual page files for a command.
-What are list and dict comprehensions?
-What do we mean when we say that a certain Lambda expression forms a closure?
-What is the difference between list and tuple?
+
+Q. What's your preferred editor?
+
+
+Q. Do arguments in Python get passed by reference or by value?
+
+
+Q. Why are functions considered first class objects in Python?
+
+
+Q. What tools do you use for linting, debugging and profiling?
+
+Linting is the process of running a program that will analyse code for potential errors. Lint was the name originally given to a particular program that flagged some suspicious and non-portable constructs (likely to be bugs) in C language source code. The term is now applied generically to tools that flag suspicious usage in software written in any computer language. Popular linting tools are flake8 and pylint. Flake 8 is simple and concise, pylint has more setup and is more comprehensive/judgemental. You can build it into your editor as well.
+
+Debugging
+
+Profiling
+
+Q. Give an example of filter and reduce over an iterable object
+
+
+Q. Implement the linux whereis command that locates the binary, source, and manual page files for a command.
+
+
+Q. What are list and dict comprehensions?
+
+
+Q. What do we mean when we say that a certain Lambda expression forms a closure?
+
+
+Q. What is the difference between list and tuple?
+
+
