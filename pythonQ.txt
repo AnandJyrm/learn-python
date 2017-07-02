@@ -67,9 +67,9 @@ Q. What tools do you use for linting, debugging and profiling?
 Linting is the process of running a program that will analyse code for potential errors. Lint was the name originally given to a particular program that flagged some suspicious and non-portable constructs (likely to be bugs) in C language source code. The term is now applied generically to tools that flag suspicious usage in software written in any computer language. Popular linting tools are flake8 and pylint. Flake 8 is simple and concise, pylint has more setup and is more comprehensive/judgemental. You can build it into your editor as well.
 
 Debugging
-
+pdb to step through the python code
 Profiling
-
+cProfile to get timing data for each function.
 Q. Give an example of filter and reduce over an iterable object
 
 
