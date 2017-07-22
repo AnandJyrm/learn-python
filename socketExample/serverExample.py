@@ -1,38 +1,51 @@
 #! /usr/bin/python
-# python socket example -- server
+# server using python sockets
 import socket
 import sys
-from time import sleep
+import thread
 
 HOST = ""  # symbolic name meaning all available interfaces
 PORT = 8888  # arbitrary non-privileged port
 
+# create socket
 try:
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    print "Socket created"
 except:
-    print "Socket creation failed"
+    print "Socket creation error"
     sys.exit()
 
+# bind socket
 try:
     s.bind((HOST, PORT))
-    print "socket bind complete"
 except:
-    print "socket bind error"
+    print "Socket bind error"
     sys.exit()
 
+# listen on socket
 s.listen(10)
-print "Socket now listening"
-while 1:
-    # wait to accept a connection blocking
-    conn, addr = s.accept()
 
-    # display client information
+
+def handleClient(conn):
+    conn.send("Welcome to server\n")
+    # keep the connection thread running till client disconnects
+    while True:
+        # receive from client
+        data = conn.recv(1024)
+        reply = "OK... " + data
+        if not data:
+            break
+        conn.sendall(reply)
+
+    # close connection when loop ends
+    conn.close()
+
+
+# to handle multiple clients
+while 1:
+    # wait to accept a connection
+    conn, addr = s.accept()
     print "connected with " + addr[0] + " : " + str(addr[1])
-    data = conn.recv(1024)
-    if not data:
-        break
-    reply =" OK..." + data
-    conn.sendall(reply)
-conn.close()
+
+    thread.start_new_thread(handleClient, (conn,))
+
 s.close()

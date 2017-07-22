@@ -24,13 +24,13 @@ except socket.gaierror:
     sys.exit()
 
 s.connect((remote_ip, port))
-print "Socket Connected to "+ host + " on port %d" % port
+print "Socket Connected to " + host + " on port %d" % port
 
 # Send some data to remote server
 message = "mew"
 while 1:
     try:
-         # set the whole string
+        # set the whole string
         s.sendall(message)
     except socket.error:
         print "Send Failed"
