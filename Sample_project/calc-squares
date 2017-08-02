@@ -1,0 +1,3 @@
+#! /usr/bin/env python
+import squares
+squares.squares(5, 15)
