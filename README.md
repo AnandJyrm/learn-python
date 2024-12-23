@@ -1,4 +1,14 @@
-# PythonProjects
+# learn-python
+
 Some python coding stuff
-	first item Interface Scanner
-		Monitors a given interface and records rx and tx bytes in a file
+
+TODO:
+ [ ] Sockets
+ [ ] OOP
+ [ ] Modules
+ [ ] Testing
+ [ ] Shell
+ [ ] Data / Abstract classes
+ [ ] Flask
+ [ ] web server
+ [ ] venv

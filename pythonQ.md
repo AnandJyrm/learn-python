@@ -1,9 +1,10 @@
-Q. What is GIL. How does it impact concurrency in Python? What kinds of applications does it impact more than others?
+## Q. What is GIL. How does it impact concurrency in Python? What kinds of applications does it impact more than others?
 
 	GIL stands for Global Interpreter Lock. Implementations of Python like CPython has GIL built into it, some others don't have it. GIL is a mutex that prevents multiple native threads from executing Python bytecodes at once. This lock is necessary mainly because CPython's memory management is not thread-safe.(Thread-safe implies the code functions correctly during simultaneous execution by multiple threads.) GIL increases speed of single threaded programs and allows integration of C libraries that are not thread safe. But it doesn't allow python programs to take gull advantage of a multiprocessor environment. Works best with multithreaded programs which are i/o bound. Works worst with multithreaded applications which are bound by CPU. To overcome GIL's performance bottleneck in multiprocessor systems, we can use multiple instances of CPython interpreter process rather than going for multiple threads.
 
 
-Q. How do you iterate over a list and pull element indices at the same time?
+## Q. How do you iterate over a list and pull element indices at the same time?
+
 Enumerate function
 Example:
 	cities = ["london", "new york", "delhi", "moscow"]
@@ -11,7 +12,7 @@ Example:
 		print i, city
 
 
-Q. So what is CPython
+## Q. So what is CPython
 
 CPython is the original Python implementation. It is the implementation you download from Python.org. People call it CPython to distinguish it from other, later, Python implementations, and to distinguish the implementation of the language engine from the Python programming language itself.
 
@@ -31,7 +32,7 @@ So CPython does not translate your Python code to C by itself. It instead runs a
 
 
 
-Q. How many ways can you append or concatenate strings? Which of these ways is fastest? Easiest to read?
+## Q. How many ways can you append or concatenate strings? Which of these ways is fastest? Easiest to read?
 
 	Print me the full pathname of every file in this directory tree.
 		os.walk()
@@ -52,7 +53,7 @@ Q. How many ways can you append or concatenate strings? Which of these ways is f
 				listFiles(sys.argv[1])
 			
 
-Q. What tools do you use for linting, debugging and profiling?
+## Q. What tools do you use for linting, debugging and profiling?
 
 Linting is the process of running a program that will analyse code for potential errors. Lint was the name originally given to a particular program that flagged some suspicious and non-portable constructs (likely to be bugs) in C language source code. The term is now applied generically to tools that flag suspicious usage in software written in any computer language. Popular linting tools are flake8 and pylint. Flake 8 is simple and concise, pylint has more setup and is more comprehensive/judgemental. You can build it into your editor as well.
 
@@ -62,7 +63,7 @@ Profiling
 cProfile to get timing data for each function.
 
 
-Q. How do you swap two variables in python?
+## Q. How do you swap two variables in python?
 
 	a, b = b, a
 
@@ -71,18 +72,18 @@ Q. How do you swap two variables in python?
 Extended_ unpacking with *
 
 
-Q. How do you enforce ordering for a dictionary-style object?
+## Q. How do you enforce ordering for a dictionary-style object?
 	collections.Ordered Dictionary ?????????????????????????
 
 
-Q. What does maximum recursion depth error mean? How to mitigate the problem?
+## Q. What does maximum recursion depth error mean? How to mitigate the problem?
 
 
 
-Q. How does Python's list.sort work at a high level? Is it stable? What's the runtime?
+## Q. How does Python's list.sort work at a high level? Is it stable? What's the runtime?
 
 
-Q. What's the difference between a list, dictionary, and array in Python?
+## Q. What's the difference between a list, dictionary, and array in Python?
 
 
 Q. What is monkeypatching? How can you do it in Python?
@@ -131,15 +132,10 @@ Q. try except else finallly
 
 
 
-Q.  __name__ variable
+## Q.  __name__ variable
 
 
 Q functions for unit testing testing in python	
-
-
-
-
-
 
 
 
@@ -149,18 +145,15 @@ Q. What is Code refactoring?
 Q. access times for dictionaries and lists operations
 
 
-Q. python 2 vs python 3
-
-
 Q. practice writing oop
 
 
-Q. default dict vs dict
+## Q. default dict vs dict
 
 
-Q. How does Python's garbage collection work?
+## Q. How does Python's garbage collection work?
 
 
-Q. What is the difference between range and xrange? How has this changed over time?
+## Q. What is the difference between range and xrange? How has this changed over time?
 
 
