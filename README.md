@@ -12,8 +12,8 @@ TODO:
 - [ ] web server
 - [ ] venv
 
-Projects:
-- [ ] Shell
+## Projects:
+### Shell
  - [ ] Print a prompt
  - [ ] Handle invalid commands
  - [ ] REPL
@@ -39,7 +39,7 @@ Projects:
  - [ ] Redirect stderr
  - [ ] Append stdout
  - [ ] Append stderr
-- [ ] Grep
+###  Grep
  - [ ] Match a literal character
  - [ ] Match digits
  - [ ] Match alphanumeric characters
@@ -56,7 +56,7 @@ Projects:
  - [ ] Single Backreference
  - [ ] Multiple Backreferences
  - [ ] Nested Backreferences
-- [ ] Git
+### Git
  - [ ] Initialize the .git directory
  - [ ] Read a blob object
  - [ ] Create a blob object
